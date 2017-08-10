@@ -1,8 +1,11 @@
 // Counter code
 var button = document.getElementById("counter");
+
 button.onclick = function() {
+    
     //Create a request to a counter endpoint
     var request = new XMLHttpRequest();
+    
     //Capture the response and store it in a variable
     request.onreadystatechange = function() {
       if (request,readyState === XMLHttpRequest.DONE) {
@@ -15,6 +18,7 @@ button.onclick = function() {
       }
       //Not done yet
     };
+    
     //Maje the request
     request.open('GET','http://dabhishekji.imad.hasura-app.io/counter', true);
     request.send(null);
